@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# 로컬 전용 설정
+*.local
+.claude/settings.local.json
+
+# 의존성 (향후 대비)
+node_modules/
