@@ -1,0 +1,10 @@
+{
+  "name": "bltech-kth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "비엘테크 — test1(PMS, 루트) + erp(BL-tech MediERP, /dashboard) + api(Vercel Serverless Functions)",
+  "scripts": {
+    "start": "node erp/server.js"
+  },
+  "engines": { "node": ">=18" }
+}

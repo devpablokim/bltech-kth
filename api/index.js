@@ -21,7 +21,11 @@ function parseBody(req) {
 module.exports = async (req, res) => {
   try {
     if (!db) db = loadDb();
-    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    // vercel.json 리라이트 /api/(.*) → /api/index?p=$1 로 진입하므로 원래 경로는 ?p= 에 담겨 온다.
+    // (직접 호출 등 p가 없는 경우 pathname을 그대로 사용)
+    const u = new URL(req.url, 'http://localhost');
+    const p = u.searchParams.get('p');
+    const pathname = p ? '/api/' + decodeURIComponent(p) : decodeURIComponent(u.pathname);
     const { result, mutated } = await handleApi(db, req.method, pathname, parseBody(req));
     if (result && result.__status) {
       const { __status, ...rest } = result;
