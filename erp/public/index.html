@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BL-tech MediERP · 비엘테크 의료용품 통합 ERP</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/dashboard/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2313202E'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%236FD3C8' font-family='monospace' font-weight='bold'>B</text></svg>">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="name">BL·<em>tech</em></div>
+      <div class="sub">MEDICAL ERP SUITE v1.0</div>
+      <span class="cert">ISO 13485 · GMP</span>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sb-foot">
+      <div class="sb-live"><span class="dot"></span>서버 실시간 동기화<span class="clock" id="clock">--:--:--</span></div>
+      <div class="user">
+        <div class="avatar" id="u-avatar">진</div>
+        <div><div class="nm" id="u-name">진은명</div><div class="rl" id="u-role">운영총괄</div></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <h1 id="pageTitle">통합 현황</h1>
+      <span class="crumb" id="crumb"></span>
+      <div class="right">
+        <span class="chip ok" id="chip-server">● 서버 연결 확인 중…</span>
+        <span class="chip med" id="chip-ai">AI</span>
+      </div>
+    </header>
+    <main class="content" id="content">
+      <div class="empty">불러오는 중…</div>
+    </main>
+  </div>
+</div>
+<div id="toast"></div>
+<script src="/dashboard/app.js"></script>
+</body>
+</html>

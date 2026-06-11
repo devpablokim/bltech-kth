@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8742", "--directory", "test1"],
       "port": 8742
+    },
+    {
+      "name": "bltech-medierp",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["erp/server.js"],
+      "port": 3000
     }
   ]
 }

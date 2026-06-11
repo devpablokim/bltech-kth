@@ -1,0 +1,11 @@
+{
+  "name": "bltech-medierp",
+  "version": "1.0.0",
+  "description": "비엘테크(BL-tech) 의료용품 통합 ERP — 영업·생산·구매·재고·물류·유통·배송·수출·원가·회계가 전부 서버단(REST API)에서 동작하는 통합 시스템",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "reset": "node -e \"require('fs').rmSync(require('path').join(__dirname,'data','db.json'),{force:true});console.log('DB 초기화 완료 — 다음 실행 시 시드 데이터로 재생성됩니다')\""
+  },
+  "engines": { "node": ">=18" }
+}
